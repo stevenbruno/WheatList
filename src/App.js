@@ -11,7 +11,7 @@ class App extends Component{
   }
   render(){
   //fakeData();
-  //addToWaitlist({person: 1}, "Bombay Wraps")
+  //addToWaitlist({person: 1}, "BrightWok")
   //You need to await the response from getFullWaitlist
   //getFullWaitlist("Bombay Wraps")
     return (

@@ -62,4 +62,17 @@ export function makeNewRestaurant(admin, id, name, waitlist, image){
   })
 }
 
+export function cancelReservation (personNumber, restaurant){
+  
+}
+
+export async function getRestaurantInfo (restaurantName) {
+  var restaurant = await db.collection("Restaurants").where("Name", "==", restaurantName).get()
+  var restaurantInfo = {
+    name: restaurant.docs[0].data().Name,
+    image: restaurant.docs[0].data().Image
+  }
+  return restaurantInfo
+}
+
 
