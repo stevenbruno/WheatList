@@ -11,7 +11,7 @@ class App extends Component{
   }
   render(){
   //fakeData();
-  //addToWaitlist({guestPhoneNumber: 2222222, partySize: 1}, "BrightWok")
+  addToWaitlist({guestPhoneNumber: 2222222, partySize: 1}, "BrightWok")
   //You need to await the response from getFullWaitlist
   //getFullWaitlist("Bombay Wraps")
   //cancelReservation(2, "BrightWok")
