@@ -48,14 +48,16 @@ class PartySizeSelector extends Component {
         
         return(
             <div>
-                <div className="1" name="1" onClick={this.onClickHandler}>1</div>
-                <div className="2" onClick={this.onClickHandler}>2</div>
-                <div className="3" onClick={this.onClickHandler}>3</div>
-                <div className="4" onClick={this.onClickHandler}>4</div>
-                <div className="5" onClick={this.onClickHandler}>5</div>
-                <div className="more" onClick={this.onClickHandler}>More</div>
+                <label>Party Size</label>
+                <div className="partyNumberWrapper">
+                    <div className="1" name="1" onClick={this.onClickHandler}>1</div>
+                    <div className="2" onClick={this.onClickHandler}>2</div>
+                    <div className="3" onClick={this.onClickHandler}>3</div>
+                    <div className="4" onClick={this.onClickHandler}>4</div>
+                    <div className="5" onClick={this.onClickHandler}>5</div>
+                    <div className="more" onClick={this.onClickHandler}>More</div>
+                </div>
                 {this.showMore()}
-
             </div>
 
         )
