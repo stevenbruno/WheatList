@@ -18,15 +18,14 @@ class PartySizeSelector extends Component {
         this.props.setPartySize(e.target.value);
     }
 
-    onClickHandler = (e) => {
-        if(e.target.className !== "more"){
-            this.setState({
-                numberSelected: e.target.className,
-                partySize: e.target.className,
+    onClickHandler =  (e) => {
+        if(e.target.id !== "more"){
+           this.setState({
+                numberSelected: e.target.id,
+                partySize: e.target.id,
                 moreSelected: false
             })
-            
-            this.props.setPartySize(e.target.className)
+            this.props.setPartySize(e.target.id)
         }
         else{
             this.setState({
@@ -44,18 +43,16 @@ class PartySizeSelector extends Component {
     }
 
     render(){
-
-        
         return(
             <div>
                 <label>Party Size</label>
                 <div className="partyNumberWrapper">
-                    <div className="1" name="1" onClick={this.onClickHandler}>1</div>
-                    <div className="2" onClick={this.onClickHandler}>2</div>
-                    <div className="3" onClick={this.onClickHandler}>3</div>
-                    <div className="4" onClick={this.onClickHandler}>4</div>
-                    <div className="5" onClick={this.onClickHandler}>5</div>
-                    <div className="more" onClick={this.onClickHandler}>More</div>
+                    <div id="1" onClick={this.onClickHandler}>1</div>
+                    <div id="2" onClick={this.onClickHandler}>2</div>
+                    <div id="3" onClick={this.onClickHandler}>3</div>
+                    <div id="4" onClick={this.onClickHandler}>4</div>
+                    <div id="5" onClick={this.onClickHandler}>5</div>
+                    <div id="more" onClick={this.onClickHandler}>More</div>
                 </div>
                 {this.showMore()}
             </div>
