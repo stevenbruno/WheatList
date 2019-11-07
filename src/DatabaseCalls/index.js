@@ -117,7 +117,13 @@ export async function howLongIsMyWait(personPhoneNumber, restaurant){
   var currentPlaceInLine = waitlistArray.indexOf(selectedGuest[0]) + 1
   console.log(currentPlaceInLine)
   return currentPlaceInLine * 5
+}
 
+export async function allRestaurants() {
+  var allRestaurantsRef = await db.collection("Restaurants").get()
+  var arrayOfRestaurants = [];
+  allRestaurantsRef.docs.forEach(doc => arrayOfRestaurants.push(doc.data().Name))
+  return arrayOfRestaurants
 }
 
 
