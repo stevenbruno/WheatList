@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PartySizeSelector from './partySizeSelector';
-import {fakeData, addToWaitlist, getFullWaitlist} from '../DatabaseCalls'
+import {fakeData, addToWaitlist, getFullWaitlist} from '../DatabaseCalls';
 
 
 class WaitlistForm extends Component {
@@ -44,21 +44,16 @@ class WaitlistForm extends Component {
         return(
             <div>
             <form class="guestEntry" onChange={this.onChangeHandler}>
-                <div>
-                    <label htmlFor="guestName">Name:</label>
+                <div className="ui input">
+                    <label htmlFor="guestName">Name</label>
                     <input name="guestName" className="guestName"type="text" />
                 </div>
-
-
-                <div> 
-                    <label htmlFor="guestPhoneNumber">Phone Number:</label>
+                <div className="ui input"> 
+                    <label htmlFor="guestPhoneNumber">Phone Number</label>
                     <input name="guestPhoneNumber" className="guestPhoneNumber" type="text" />
                 </div>
-
                 <PartySizeSelector setPartySize={this.setPartySize}/>
-
-
-                <button onClick={this.submitHandler} type="submit">SUBMIT</button>
+                <button className="ui primary button" onClick={this.submitHandler} type="submit">Join waitlist</button>
             </form>
             </div>
         )
