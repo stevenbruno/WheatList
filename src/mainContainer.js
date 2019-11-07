@@ -20,11 +20,11 @@ class MainContainer extends Component{
         return(
             <Fragment>
                 <RestaurantBanner
-                name="Girl and the Goat" 
+                name="BrightWok" 
                 image="https://d253b1eioa5z7b.cloudfront.net/venue_images/medium_3049ae72-2cef-4ba3-b3eb-9f439e27cf3a.jpg"
                 />
                 
-                <WaitlistForm />
+                <WaitlistForm name="BrightWok"/>
             </Fragment>
 
         )}
