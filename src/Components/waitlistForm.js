@@ -25,13 +25,14 @@ class WaitlistForm extends Component {
         })
     }
 
-    submitHandler = (e) =>{
+    submitHandler = async (e) =>{
 
         e.preventDefault()
 
         addToWaitlist(this.state, this.props.name)
 
         this.props.setFormSubmission();
+        this.props.setUserAttributes(this.state)
         
         this.setState({
             guestName: '',
