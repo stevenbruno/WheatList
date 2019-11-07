@@ -32,7 +32,7 @@ class CancelForm extends Component{
 
                 <p>You have approximately {this.props.waitTime} minutes left.</p>
 
-                <button onClick={this.clickHandler}>Sorry, but I have to cancel!</button>
+                <button className="ui red basic button" onClick={this.clickHandler}>Cancel reservation</button>
 
             </Fragment>
         )
