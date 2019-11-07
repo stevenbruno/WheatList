@@ -32,12 +32,15 @@ export async function fakeData() {
 }
 
 export async function addToWaitlist(personObj, restaurant) {
-  var personString = JSON.stringify(personObj)  
+
   var ref = await db.collection("Restaurants").where("Name", "==", restaurant)
 
   var updatedRestaurant = await ref.get()
   var id = updatedRestaurant.docs[0].id
   var currentWaitlist = updatedRestaurant.docs[0].data().Waitlist
+
+  personObj.time = Date.now();
+  var personString = JSON.stringify(personObj);    
   currentWaitlist.push(personString)
   db.collection("Restaurants").doc(id).update(
     {"Waitlist": currentWaitlist}
@@ -66,7 +69,6 @@ export async function cancelReservation (personNumber, restaurantName){
   var peopleLeftOnWaitList = waitlistArray.filter(person => person.guestPhoneNumber != personNumber)
   var finalWaitlist = [];
   peopleLeftOnWaitList.forEach(person => finalWaitlist.push(JSON.stringify(person)));
-  console.log(finalWaitlist);
   db.collection("Restaurants").doc(id).update(
     {"Waitlist": finalWaitlist}
   )
@@ -81,6 +83,41 @@ export async function getRestaurantInfo (restaurantName) {
     image: restaurant.docs[0].data().Image
   }
   return restaurantInfo
+}
+
+export async function nextParty(partySize, restaurant){
+  var selectedRestaurant = await db.collection("Restaurants").where("Name", "==", restaurant).get()
+  var id = selectedRestaurant.docs[0].id
+  var waitlistArray = selectedRestaurant.docs[0].data().Waitlist.map(person => JSON.parse(person))
+  var correctPartySize = waitlistArray.filter(person => person.partySize === partySize)
+  var nextGuest = {};
+  for (let i = 0; i < correctPartySize.length - 1; i++){
+    var person = correctPartySize[i]
+    if(Object.keys(nextGuest).length === 0){
+      nextGuest = person;
+    } else if (person.time < nextGuest.time){
+      nextGuest = person;
+    } 
+  }
+  var newWaitlist = []
+  var almostFinalWaitlist = waitlistArray = waitlistArray.filter(person => person.guestPhoneNumber != nextGuest.guestPhoneNumber)
+  almostFinalWaitlist.forEach(person => newWaitlist.push(JSON.stringify(person)))
+  db.collection("Restaurants").doc(id).update(
+    {"Waitlist": newWaitlist}
+  )
+  return nextGuest;
+}
+
+export async function howLongIsMyWait(personPhoneNumber, restaurant){
+  var selectedRestaurant = await db.collection("Restaurants").where("Name", "==", restaurant).get()
+  var waitlistArray = selectedRestaurant.docs[0].data().Waitlist.map(person => JSON.parse(person))
+  var selectedGuest = waitlistArray.filter(person => person.guestPhoneNumber === personPhoneNumber)
+  waitlistArray.sort((a,b) => (a.time > b.time) ? 1: -1)
+  console.log(selectedGuest[0])
+  var currentPlaceInLine = waitlistArray.indexOf(selectedGuest[0]) + 1
+  console.log(currentPlaceInLine)
+  return currentPlaceInLine * 5
+
 }
 
 
