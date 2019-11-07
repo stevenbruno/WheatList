@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import MainContainer from './mainContainer'
-import {fakeData, addToWaitList, getFullWaitlist} from './Fakedata'
+import {fakeData, addToWaitList, getFullWaitlist} from './DatabaseCalls'
 
 class App extends Component{
   //fakeData();
