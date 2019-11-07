@@ -9,7 +9,7 @@ class MainContainer extends Component{
 
         this.state={
             name: "",
-            imgSrc="",
+            imgSrc:"",
         }
  
     }
