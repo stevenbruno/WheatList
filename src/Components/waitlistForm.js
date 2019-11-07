@@ -44,16 +44,16 @@ class WaitlistForm extends Component {
     render(){
         return(
             <div>
-            <form onChange={this.onChangeHandler}>
+            <form class="guestEntry" onChange={this.onChangeHandler}>
                 <div>
                     <label htmlFor="guestName">Name:</label>
-                        <input name="guestName" className="guestName"type="text" />
+                    <input name="guestName" className="guestName"type="text" />
                 </div>
 
 
                 <div> 
                     <label htmlFor="guestPhoneNumber">Phone Number:</label>
-                        <input name="guestPhoneNumber" className="guestPhoneNumber" type="text" />
+                    <input name="guestPhoneNumber" className="guestPhoneNumber" type="text" />
                 </div>
 
                 <PartySizeSelector setPartySize={this.setPartySize}/>
