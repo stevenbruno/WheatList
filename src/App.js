@@ -1,18 +1,19 @@
 import React, {Component} from 'react';
 import MainContainer from './mainContainer'
-import {fakeData, addToWaitList, getFullWaitlist} from './DatabaseCalls'
+import {fakeData, addToWaitlist, getFullWaitlist} from './DatabaseCalls'
 
 class App extends Component{
-  //fakeData();
-  //addToWaitList({person: 1}, "Bombay Wraps")
-  //You need to await the response from getFullWaitlist
-  //getFullWaitlist("Bombay Wraps")
+
 
   constructor(){
     super();
 
   }
   render(){
+  //fakeData();
+  //addToWaitlist({person: 1}, "Bombay Wraps")
+  //You need to await the response from getFullWaitlist
+  //getFullWaitlist("Bombay Wraps")
     return (
       <div className="App">
         <MainContainer />

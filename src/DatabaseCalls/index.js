@@ -34,7 +34,7 @@ export async function fakeData() {
   })
 }
 
-export async function addToWaitList(personObj, restaurant) {
+export async function addToWaitlist(personObj, restaurant) {
   var personString = JSON.stringify(personObj)
   var ref = await db.collection("Restaurants").where("Name", "==", restaurant)
   var updatedRestaurant = await ref.get()
