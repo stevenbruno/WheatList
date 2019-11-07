@@ -25,10 +25,11 @@
 
 .restaurantBanner{
   display: flex;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   height: 64px;
   background-color: #ff4c00;
   justify-content: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .restaurantImage{
@@ -40,13 +41,15 @@
   font-size: 24px;
   font-weight: 600;
   color: white;
+  line-height: 60px;
 }
 
 form.guestEntry {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 10vw;
+  margin: auto;
+  width: 240px;
 }
 
 .guestEntry > div {
@@ -62,7 +65,13 @@ form.guestEntry {
 
 .partyNumberWrapper {
   display: flex;
-  width: 200px;
+  width: 240px;
   justify-content: space-between;
   margin-top: 8px;
+  margin-bottom: 24px;
+  padding-right: 4px;
+}
+
+.joinButton {
+  align-self: flex-end;
 }

@@ -54,7 +54,7 @@ class WaitlistForm extends Component {
                     <input name="guestPhoneNumber" className="guestPhoneNumber" type="text" />
                 </div>
                 <PartySizeSelector setPartySize={this.setPartySize}/>
-                <button className="ui primary button" onClick={this.submitHandler} type="submit">Join waitlist</button>
+                <button className="ui primary button joinButton" onClick={this.submitHandler} type="submit">Join waitlist</button>
             </form>
             </div>
         )
