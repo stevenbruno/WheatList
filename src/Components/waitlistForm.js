@@ -26,12 +26,12 @@ class WaitlistForm extends Component {
     }
 
     submitHandler = (e) =>{
-        console.log("submitHandler")
 
-        console.log(this.state);
+        e.preventDefault()
 
         addToWaitlist(this.state, this.props.name)
-        console.log("submitHandler")
+
+        this.props.setFormSubmission();
         
         this.setState({
             guestName: '',
@@ -51,7 +51,7 @@ class WaitlistForm extends Component {
 
 
                 <div> 
-                    <label htmlFor="guestPhoneNumber">Phone Number</label>
+                    <label htmlFor="guestPhoneNumber">Phone Number:</label>
                         <input name="guestPhoneNumber" className="guestPhoneNumber" type="text" />
                 </div>
 

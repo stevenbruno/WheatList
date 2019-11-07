@@ -32,11 +32,10 @@ export async function fakeData() {
 }
 
 export async function addToWaitlist(personObj, restaurant) {
-  var personString = JSON.stringify(personObj)
-  
+  var personString = JSON.stringify(personObj)  
   var ref = await db.collection("Restaurants").where("Name", "==", restaurant)
-  var updatedRestaurant = await ref.get()
 
+  var updatedRestaurant = await ref.get()
   var id = updatedRestaurant.docs[0].id
   var currentWaitlist = updatedRestaurant.docs[0].data().Waitlist
   currentWaitlist.push(personString)

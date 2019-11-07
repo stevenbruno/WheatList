@@ -23,13 +23,22 @@
   color: #09d3ac;
 }
 
+.restaurantBanner{
+  display: flex;
+  margin-bottom: 24px;
+  height: 64px;
+  background-color: #ff4c00;
+  justify-content: center;
+}
+
+.restaurantImage{
+  width: 64px;
+}
+
 .restaurantHeading{
   text-align: center;
-  font-size: 56px;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
 }
-
-.restaurantBanner{
-  margin-bottom: -25px;
-}
-
 
