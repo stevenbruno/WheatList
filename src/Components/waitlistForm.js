@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PartySizeSelector from './partySizeSelector';
-import {fakeData, addToWaitlist, getFullWaitlist} from '../DatabaseCalls'
+import {fakeData, addToWaitlist, getFullWaitlist} from '../DatabaseCalls';
 
 
 class WaitlistForm extends Component {
@@ -25,13 +25,14 @@ class WaitlistForm extends Component {
         })
     }
 
-    submitHandler = (e) =>{
+    submitHandler = async (e) =>{
 
         e.preventDefault()
 
         addToWaitlist(this.state, this.props.name)
 
         this.props.setFormSubmission();
+        this.props.setUserAttributes(this.state)
         
         this.setState({
             guestName: '',
@@ -43,22 +44,17 @@ class WaitlistForm extends Component {
     render(){
         return(
             <div>
-            <form onChange={this.onChangeHandler}>
-                <div>
-                    <label htmlFor="guestName">Name:</label>
-                        <input name="guestName" className="guestName"type="text" />
+            <form class="guestEntry" onChange={this.onChangeHandler}>
+                <div className="ui input">
+                    <label htmlFor="guestName">Name</label>
+                    <input name="guestName" className="guestName"type="text" />
                 </div>
-
-
-                <div> 
-                    <label htmlFor="guestPhoneNumber">Phone Number:</label>
-                        <input name="guestPhoneNumber" className="guestPhoneNumber" type="text" />
+                <div className="ui input"> 
+                    <label htmlFor="guestPhoneNumber">Phone Number</label>
+                    <input name="guestPhoneNumber" className="guestPhoneNumber" type="text" />
                 </div>
-
                 <PartySizeSelector setPartySize={this.setPartySize}/>
-
-
-                <button onClick={this.submitHandler} type="submit">SUBMIT</button>
+                <button className="ui primary button joinButton" onClick={this.submitHandler} type="submit">Join waitlist</button>
             </form>
             </div>
         )
