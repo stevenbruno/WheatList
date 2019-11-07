@@ -5,10 +5,10 @@ import '../App.css'
 const RestaurantBanner = (props) => {
         return(
             <div>
-                <div class="restaurantBanner">
+                <div className="restaurantBanner">
                     <img src={props.image}></img>
                 </div>
-                <h1 class="restaurantHeading">{props.name}</h1>
+                <h1 className="restaurantHeading">{props.name}</h1>
             </div>
 
         )

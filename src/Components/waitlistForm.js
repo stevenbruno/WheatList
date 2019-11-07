@@ -15,22 +15,27 @@ class WaitlistForm extends Component {
 
     }
 
-    onChangeHandler(){
-        
+    onChangeHandler = (e) =>{
+        this.setState({
+            [e.target.name]:e.target.value
+        });
+
+        console.log(this.state);
+
     }
 
     render(){
         return(
             <div>
-            <form>
+            <form onChange={this.onChangeHandler}>
                 <div>
-                    <label for="guestName">Name:</label>
-                        <input className="guestName"type="text" />
+                    <label htmlFor="guestName">Name:</label>
+                        <input name="guestName" className="guestName"type="text" />
                 </div>
 
                 <div> 
-                    <label for="phoneNumber">Phone Number</label>
-                        <input className="phoneNumber" type="text" />
+                    <label htmlFor="phoneNumber">Phone Number</label>
+                        <input name="phoneNumber" className="phoneNumber" type="text" />
                 </div>
 
                 <PartySizeSelector />
