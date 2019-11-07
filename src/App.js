@@ -14,7 +14,7 @@ class App extends Component{
   //addToWaitlist({guestPhoneNumber: 2}, "BrightWok")
   //You need to await the response from getFullWaitlist
   //getFullWaitlist("Bombay Wraps")
-  cancelReservation(2, "BrightWok")
+  //cancelReservation(2, "BrightWok")
     return (
       <div className="App">
         <MainContainer />
