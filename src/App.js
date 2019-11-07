@@ -17,7 +17,7 @@ class App extends Component{
   //cancelReservation(2, "BrightWok")
   //nextParty(1, "BrightWok")
   //Returns how long your wait is!
-  console.log(howLongIsMyWait(2222222, "BrightWok"))
+  //howLongIsMyWait(2222222, "BrightWok")
   //allRestaurants()
     return (
       <div className="App">
