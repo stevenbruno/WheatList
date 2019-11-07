@@ -27,9 +27,9 @@ class CancelForm extends Component{
         return(
             <Fragment>
 
-                <p>You're the {this.props.waitlistPosition} in line!</p>
+                <p className="lineText">You're the {this.props.waitlistPosition} in line!</p>
 
-                <button onClick={this.clickHandler}>Sorry, but I have to cancel!</button>
+                <button className="ui red basic button" onClick={this.clickHandler}>Cancel reservation</button>
 
             </Fragment>
         )
