@@ -1,27 +1,28 @@
 import React, {Component} from 'react';
 import PartySizeSelector from './partySizeSelector';
+import Formik from 'formik';
 
 
 class WaitlistForm extends Component {
 
     constructor(){
         super();
-
         this.state={
             guestName: '',
             guestPhoneNumber: '',
             partySize: ''
         }
-
     }
-
     onChangeHandler = (e) =>{
         this.setState({
             [e.target.name]:e.target.value
         });
-
-        console.log(this.state);
-
+    }
+    
+    setPartySize = (number) =>{
+        this.setState({
+            partySize: number
+        })
     }
 
     render(){
@@ -34,11 +35,11 @@ class WaitlistForm extends Component {
                 </div>
 
                 <div> 
-                    <label htmlFor="phoneNumber">Phone Number</label>
-                        <input name="phoneNumber" className="phoneNumber" type="text" />
+                    <label htmlFor="guestPhoneNumber">Phone Number</label>
+                        <input name="guestPhoneNumber" className="guestPhoneNumber" type="text" />
                 </div>
 
-                <PartySizeSelector />
+                <PartySizeSelector setPartySize={this.setPartySize}/>
 
 
                 <button type="submit">SUBMIT</button>

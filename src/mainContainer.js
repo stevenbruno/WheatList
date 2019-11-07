@@ -7,8 +7,14 @@ class MainContainer extends Component{
     constructor(){
         super();
 
-
+        this.state={
+            name: "",
+            imgSrc="",
+        }
+ 
     }
+
+    //get information to pass down on componentDidMount
 
     render(){
         return(
