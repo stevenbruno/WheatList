@@ -112,10 +112,9 @@ export async function howLongIsMyWait(personPhoneNumber, restaurant){
   var selectedRestaurant = await db.collection("Restaurants").where("Name", "==", restaurant).get()
   var waitlistArray = selectedRestaurant.docs[0].data().Waitlist.map(person => JSON.parse(person))
   var selectedGuest = waitlistArray.filter(person => person.guestPhoneNumber === personPhoneNumber)
-  waitlistArray.sort((a,b) => (a.time > b.time) ? 1: -1)
-  console.log(selectedGuest[0])
+  waitlistArray.sort((a,b) => a.time - b.time)
   var currentPlaceInLine = waitlistArray.indexOf(selectedGuest[0]) + 1
-  console.log(currentPlaceInLine)
+  
   return currentPlaceInLine * 5
 }
 
