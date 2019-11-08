@@ -45,7 +45,7 @@ class WaitlistForm extends Component {
     render(){
         return(
             <div>
-            <form class="guestEntry" onChange={this.onChangeHandler}>
+            <form className="guestEntry" onChange={this.onChangeHandler}>
                 <div className="ui input">
                     <label htmlFor="guestName">Name</label>
                     <input name="guestName" className="guestName"type="text" />
