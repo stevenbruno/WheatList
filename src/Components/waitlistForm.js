@@ -51,7 +51,7 @@ class WaitlistForm extends Component {
                 </div>
                 <div className="ui input"> 
                     <label htmlFor="guestPhoneNumber">Phone Number</label>
-                    <input name="guestPhoneNumber" className="guestPhoneNumber" type="text" />
+                    <input name="guestPhoneNumber" className="guestPhoneNumber" type="text" placeholder="(123) 456 - 7890"/>
                 </div>
                 <PartySizeSelector setPartySize={this.setPartySize}/>
                 <button className="ui primary button joinButton" onClick={this.submitHandler} type="submit">Join waitlist</button>
