@@ -30,7 +30,7 @@ class CancelForm extends Component{
 
                 <p>You're the {this.props.waitlistPosition}th party in line!</p>
 
-                <p>You have approximately {this.props.waitTime} minutes left.</p>
+                <p>You have approximately {this.props.waitTime} until your table will be ready.</p>
 
                 <button className="ui red basic button" onClick={this.clickHandler}>Cancel reservation</button>
 

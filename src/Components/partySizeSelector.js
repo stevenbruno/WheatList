@@ -25,12 +25,26 @@ class PartySizeSelector extends Component {
                 partySize: e.target.id,
                 moreSelected: false
             })
+
+            const htmlCollectionOfDivs = document.getElementsByClassName("numberButtonActive")
+
+            if(htmlCollectionOfDivs.length){
+                htmlCollectionOfDivs[0].className ="numberButton"
+            }
+
+            e.target.className = "numberButtonActive"
             this.props.setPartySize(e.target.id)
         }
         else{
             this.setState({
                 moreSelected: true
             })
+
+            const htmlCollectionOfDivs = document.getElementsByClassName("numberButtonActive")
+
+            if(htmlCollectionOfDivs.length){
+                htmlCollectionOfDivs[0].className ="numberButton"
+            }
         }
     }
     
