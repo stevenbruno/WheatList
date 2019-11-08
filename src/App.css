@@ -83,8 +83,20 @@ form.guestEntry {
 .numberButton {
   width: 32px;
   height: 32px;
-  padding-top: 3px;
-  border: 2px solid rgb(90, 121, 221); 
+  padding-top: 5px;
   border-radius: 64px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #3d72d7;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.moreButton {
+  color: #3d72d7;
+  font-weight: 600;
+  padding-top: 6px;
+}
+
+.numberButton:hover,
+.moreButton:hover {
+  cursor: pointer;
 }

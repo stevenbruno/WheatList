@@ -52,7 +52,7 @@ class PartySizeSelector extends Component {
                     <div className="numberButton" id="3" onClick={this.onClickHandler}>3</div>
                     <div className="numberButton" id="4" onClick={this.onClickHandler}>4</div>
                     <div className="numberButton" id="5" onClick={this.onClickHandler}>5</div>
-                    <div id="more" onClick={this.onClickHandler}>More</div>
+                    <div className="moreButton" id="more" onClick={this.onClickHandler}>More</div>
                 </div>
                 {this.showMore()}
             </div>
