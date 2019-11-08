@@ -27,6 +27,7 @@
   display: flex;
   margin-bottom: 40px;
   height: 64px;
+  border-top: 4px solid #ff4c00;
   background-color: rrgb(242, 242, 242);
   justify-content: center;
   box-shadow: 0 1px 4px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
