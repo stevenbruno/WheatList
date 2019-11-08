@@ -67,6 +67,12 @@ class MainContainer extends Component{
                 name="BrightWok" 
                 image="/public/noun_Wok_661432.png"
                 />
+                
+                {this.state.submittedForm ? <Fragment /> :
+                    <div className="waitTimeInfo">
+                    <p>Current wait time: {this.state.waitTime} minutes</p>
+                    </div>
+                }
                {this.state.submittedForm ?  
                     <CancelReservation guestPhoneNumber={this.state.guestPhoneNumber}
                                     waitlistPosition={this.state.waitlistPosition} 
@@ -76,11 +82,9 @@ class MainContainer extends Component{
                 
                     <WaitlistForm setUserAttributes={this.setUserAttributes}
                         setFormSubmission={this.setFormSubmission} 
-                        name="BrightWok"/>}
+                        name="BrightWok" />
+                }
 
-                {this.state.submittedForm ? <Fragment /> :
-                                <div><br/><br/><p>The wait time at Brightwok is currently {this.state.waitTime} minutes </p></div>
-                                }
             </Fragment> 
 
         )}
