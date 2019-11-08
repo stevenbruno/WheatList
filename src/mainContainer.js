@@ -52,7 +52,7 @@ class MainContainer extends Component{
             <Fragment>
                 <RestaurantBanner
                 name="BrightWok" 
-                image="https://d253b1eioa5z7b.cloudfront.net/venue_images/medium_3049ae72-2cef-4ba3-b3eb-9f439e27cf3a.jpg"
+                image="/public/noun_Wok_661432.png"
                 />
                {this.state.submittedForm ?  
                     <CancelReservation guestPhoneNumber={this.state.guestPhoneNumber}
