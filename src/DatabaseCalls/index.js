@@ -115,7 +115,7 @@ export async function howLongIsMyWait(personPhoneNumber, restaurant){
   waitlistArray.sort((a,b) => a.time - b.time)
   var currentPlaceInLine = waitlistArray.indexOf(selectedGuest[0]) + 1
   
-  return currentPlaceInLine * 5
+  return currentPlaceInLine * 3
 }
 
 export async function allRestaurants() {

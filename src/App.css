@@ -32,7 +32,6 @@ h1,h2,h3,h4,h5 {
   margin-bottom: 40px;
   height: 64px;
   border-top: 4px solid #ff4c00;
-  background-color: rrgb(242, 242, 242);
   justify-content: center;
   box-shadow: 0 1px 4px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -104,4 +103,38 @@ form.guestEntry {
 .numberButton:hover,
 .moreButton:hover {
   cursor: pointer;
+}
+
+.positionInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
+}
+
+.positionInfo > div {
+  display: flex;
+  align-items: center;
+  margin-left: 64px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.positionInfo i {
+  padding-top: 2px;
+}
+
+.checkIcon {
+  color: rgb(104, 116, 155);
+  font-size: 18px;
+}
+
+.cancelButton {
+  margin: auto!important;
+  margin-top: 10vh!important;
+}
+
+.positionVal {
+  color: grey;
+  font-weight: 400;
 }

@@ -26,15 +26,20 @@ class CancelForm extends Component{
 
     render(){
         return(
-            <Fragment>
+            <div className="positionInfo">
 
-                <p>You're the {this.props.waitlistPosition}th party in line!</p>
+                <div>
+                    <i class="material-icons checkIcon">check_circle_outline</i>&nbsp;
+                    Position in line <span className="positionVal">&nbsp;&nbsp;{this.props.waitlistPosition}</span>
+                </div>
+                <div>
+                <i class="material-icons checkIcon">check_circle_outline</i>&nbsp;
+                    Estimated time <span className="positionVal">&nbsp;&nbsp;{this.props.waitTime} minutes</span>
+                </div>
 
-                <p>You have approximately {this.props.waitTime} minutes left.</p>
+                <button className="ui red basic button cancelButton" onClick={this.clickHandler}>Cancel reservation</button>
 
-                <button className="ui red basic button" onClick={this.clickHandler}>Cancel reservation</button>
-
-            </Fragment>
+            </div>
         )
 
     }
