@@ -3,7 +3,7 @@ import firebase from '../Firebase'
 const db = firebase.firestore();
 const accountSid = 'AC47122c492e808618dc138434c80a5dcd';
 const authToken = ''
-const client = require('twilio')(accountSid, authToken);
+// const client = require('twilio')(accountSid, authToken);
 
 
 db.settings({});
