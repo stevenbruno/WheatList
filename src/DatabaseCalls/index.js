@@ -114,7 +114,7 @@ export async function nextParty(partySize, restaurant){
 
   /*client.messages
     .create({
-       body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+       body: 'Your table will soon be ready at`${restaurant}.'
        from: '+12015845372',
        to: nextGuest.guestPhoneNumber
      })
