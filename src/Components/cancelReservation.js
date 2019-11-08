@@ -34,7 +34,7 @@ class CancelForm extends Component{
                 </div>
                 <div>
                 <i class="material-icons checkIcon">check_circle_outline</i>&nbsp;
-                    Estimated time <span className="positionVal">&nbsp;&nbsp;{this.props.waitTime} minutes</span>
+                    Estimated wait <span className="positionVal">&nbsp;&nbsp;{this.props.waitTime} minutes</span>
                 </div>
 
                 <button className="ui red basic button cancelButton" onClick={this.clickHandler}>Cancel reservation</button>

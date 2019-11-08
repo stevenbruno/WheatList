@@ -129,8 +129,9 @@ form.guestEntry {
   display: flex;
   align-items: center;
   margin-left: 64px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-weight: 600;
+  color: #444;
 }
 
 .positionInfo i {
@@ -138,7 +139,7 @@ form.guestEntry {
 }
 
 .checkIcon {
-  color: rgb(104, 116, 155);
+  color: green;
   font-size: 18px;
 }
 
