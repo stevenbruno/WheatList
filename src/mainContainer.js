@@ -39,7 +39,7 @@ class MainContainer extends Component{
 
        const lengthOfWaitlist = await getFullWaitlist('BrightWok')
 
-       const waitTime = lengthOfWaitlist.length * 5
+       const waitTime = lengthOfWaitlist.length * 3
 
         this.setState({
             waitTime: waitTime
