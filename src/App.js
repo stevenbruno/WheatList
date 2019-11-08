@@ -19,6 +19,9 @@ class App extends Component{
   //Returns how long your wait is!
   //howLongIsMyWait(2222222, "BrightWok")
   //allRestaurants()
+
+    console.log("twilio")
+    console.log(process.env.TWILIO_TOKEN)
     return (
       <div className="App">
         <MainContainer />

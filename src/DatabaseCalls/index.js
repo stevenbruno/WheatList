@@ -1,6 +1,11 @@
 import firebase from '../Firebase'
 
 const db = firebase.firestore();
+const accountSid = 'AC47122c492e808618dc138434c80a5dcd';
+const authToken = ''
+const client = require('twilio')(accountSid, authToken);
+
+
 db.settings({});
 
 export async function fakeData() {
@@ -105,6 +110,16 @@ export async function nextParty(partySize, restaurant){
   db.collection("Restaurants").doc(id).update(
     {"Waitlist": newWaitlist}
   )
+
+
+  /*client.messages
+    .create({
+       body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+       from: '+12015845372',
+       to: nextGuest.guestPhoneNumber
+     })
+    .then(message => console.log(message.sid));*/
+
   return nextGuest;
 }
 
