@@ -2,6 +2,7 @@
   text-align: center;
   color: #333;
   font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px;
 }
 
 h1,h2,h3,h4,h5 {
@@ -29,10 +30,9 @@ h1,h2,h3,h4,h5 {
 
 .restaurantBanner{
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   height: 64px;
   border-top: 4px solid #ff4c00;
-  background-color: rrgb(242, 242, 242);
   justify-content: center;
   box-shadow: 0 1px 4px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -72,7 +72,7 @@ form.guestEntry {
   display: flex;
   width: 240px;
   justify-content: space-between;
-  margin-top: 8px;
+  margin-top: 4px;
   margin-bottom: 24px;
   padding-right: 4px;
 }
@@ -96,15 +96,14 @@ form.guestEntry {
 }
 
 .numberButtonActive {
-
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
   padding-top: 5px;
   border-radius: 64px;
   font-weight: 700;
-  color: orange;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.5);
-
+  background-color: #2185d0;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .moreButton {
@@ -116,4 +115,55 @@ form.guestEntry {
 .numberButton:hover,
 .moreButton:hover {
   cursor: pointer;
+}
+
+.positionInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
+  margin-top: 48px;
+}
+
+.positionInfo > div {
+  display: flex;
+  align-items: center;
+  margin-left: 64px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #444;
+}
+
+.positionInfo i {
+  padding-top: 2px;
+}
+
+.checkIcon {
+  color: green;
+  font-size: 18px;
+}
+
+.cancelButton {
+  margin: auto!important;
+  margin-top: 10vh!important;
+}
+
+.positionVal {
+  color: grey;
+  font-weight: 400;
+}
+
+.waitTimeInfo {
+  margin: auto;
+  margin-bottom: 16px;
+  color:#6f6f6f;
+  font-weight: 4  00;
+  font-size: 14px;
+}
+
+.separatorLine {
+  width: 60vw;
+  border: 0;
+  border-top: 1px solid rgb(211, 211, 211);
+  margin-bottom: 32px;
 }
