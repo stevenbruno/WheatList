@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from 'react';
+import {cancelReservation} from '../DatabaseCalls'
 
 
 class CancelForm extends Component{
@@ -13,21 +14,23 @@ class CancelForm extends Component{
 
     clickHandler = () => {
 
+        cancelReservation(this.props.guestPhoneNumber, 'BrightWok')
+
         this.setState({
             cancelSubmission: true
         })
-
         this.props.setFormSubmission()
 
     }
 
 
     render(){
-
         return(
             <Fragment>
 
-                <p className="lineText">You're the {this.props.waitlistPosition} in line!</p>
+                <p>You're the {this.props.waitlistPosition}th party in line!</p>
+
+                <p>You have approximately {this.props.waitTime} minutes left.</p>
 
                 <button className="ui red basic button" onClick={this.clickHandler}>Cancel reservation</button>
 

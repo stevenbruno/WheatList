@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import MainContainer from './mainContainer'
-import {fakeData, addToWaitlist, getFullWaitlist, cancelReservation, nextParty, howLongIsMyWait} from './DatabaseCalls'
+import {fakeData, addToWaitlist, getFullWaitlist, cancelReservation, nextParty, howLongIsMyWait, allRestaurants} from './DatabaseCalls'
 
 class App extends Component{
 
@@ -18,6 +18,7 @@ class App extends Component{
   //nextParty(1, "BrightWok")
   //Returns how long your wait is!
   //howLongIsMyWait(2222222, "BrightWok")
+  //allRestaurants()
     return (
       <div className="App">
         <MainContainer />

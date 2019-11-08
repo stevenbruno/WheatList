@@ -18,7 +18,7 @@ class WaitlistForm extends Component {
             [e.target.name]:e.target.value
         });
     }
-
+    
     setPartySize = (number) =>{
         this.setState({
             partySize: number
@@ -29,7 +29,7 @@ class WaitlistForm extends Component {
 
         e.preventDefault()
 
-        addToWaitlist(this.state, this.props.name)
+        await addToWaitlist(this.state, this.props.name)
 
         this.props.setFormSubmission();
         this.props.setUserAttributes(this.state)
