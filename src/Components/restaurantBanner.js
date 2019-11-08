@@ -5,7 +5,7 @@ import '../App.css'
 const RestaurantBanner = (props) => {
         return(
             <div className="restaurantBanner">
-                {/* <img className="restaurantImage" src={props.image}></img> */}
+                {/* <img src={props.image} alt="wok icon" /> */}
                 <h1 className="restaurantHeading">{props.name}</h1>
             </div>
 

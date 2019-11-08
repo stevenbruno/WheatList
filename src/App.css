@@ -4,6 +4,10 @@
   font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+h1,h2,h3,h4,h5 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 .App-logo {
   height: 40vmin;
 }
@@ -27,6 +31,7 @@
   display: flex;
   margin-bottom: 40px;
   height: 64px;
+  border-top: 4px solid #ff4c00;
   background-color: rrgb(242, 242, 242);
   justify-content: center;
   box-shadow: 0 1px 4px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
