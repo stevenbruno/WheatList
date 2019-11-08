@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  color: #333;
+  font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .App-logo {
@@ -76,4 +78,13 @@ form.guestEntry {
 
 .lineText {
   margin-bottom: 48px;
+}
+
+.numberButton {
+  width: 32px;
+  height: 32px;
+  padding-top: 3px;
+  border: 2px solid rgb(90, 121, 221); 
+  border-radius: 64px;
+  font-weight: 500;
 }
