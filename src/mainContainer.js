@@ -33,6 +33,19 @@ class MainContainer extends Component{
             waitTime: waitTime
         })
     }
+
+
+    componentDidMount= async()=>{
+
+       const lengthOfWaitlist = await getFullWaitlist('BrightWok')
+
+       const waitTime = lengthOfWaitlist.length * 5
+
+        this.setState({
+            waitTime: waitTime
+        })
+
+    }
  
     setFormSubmission=(submission)=>{
         if(!this.state.submittedForm){
@@ -65,6 +78,9 @@ class MainContainer extends Component{
                         setFormSubmission={this.setFormSubmission} 
                         name="BrightWok"/>}
 
+                {this.state.submittedForm ? <Fragment /> :
+                                <div><br/><br/><p>The wait time at Brightwok is currently {this.state.waitTime} minutes </p></div>
+                                }
             </Fragment> 
 
         )}
