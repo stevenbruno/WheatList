@@ -14,7 +14,7 @@ class CancelForm extends Component{
 
     clickHandler = () => {
 
-        cancelReservation(this.props.guestPhoneNumber, 'BrightWok')
+        cancelReservation(this.props.guestPhoneNumber, 'Au Cheval')
 
         this.setState({
             cancelSubmission: true

@@ -22,8 +22,8 @@ class MainContainer extends Component{
 
     setUserAttributes= async(user)=>{
 
-        const position =await getFullWaitlist('BrightWok')
-        const waitTime = await howLongIsMyWait(user.guestPhoneNumber, 'BrightWok')
+        const position =await getFullWaitlist('Au Cheval')
+        const waitTime = await howLongIsMyWait(user.guestPhoneNumber, 'Au Cheval')
 
         this.setState({
             guestName: user.guestName,
@@ -37,7 +37,7 @@ class MainContainer extends Component{
 
     componentDidMount= async()=>{
 
-       const lengthOfWaitlist = await getFullWaitlist('BrightWok')
+       const lengthOfWaitlist = await getFullWaitlist('Au Cheval')
 
        const waitTime = lengthOfWaitlist.length * 3
 
@@ -64,7 +64,7 @@ class MainContainer extends Component{
         return(
             <Fragment>
                 <RestaurantBanner
-                name="BrightWok" 
+                name="Au Cheval" 
                 image="/public/noun_Wok_661432.png"
                 />
                 
@@ -78,11 +78,11 @@ class MainContainer extends Component{
                                     waitlistPosition={this.state.waitlistPosition} 
                                     setFormSubmission={this.setFormSubmission}
                                     waitTime={this.state.waitTime}  
-                                    name="BrightWok"/> : 
+                                    name="Au Cheval"/> : 
                 
                     <WaitlistForm setUserAttributes={this.setUserAttributes}
                         setFormSubmission={this.setFormSubmission} 
-                        name="BrightWok" />
+                        name="Au Cheval" />
                 }
 
             </Fragment> 

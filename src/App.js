@@ -11,13 +11,13 @@ class App extends Component{
   }
   render(){
   //fakeData();
-  //addToWaitlist({guestPhoneNumber: 2222222, partySize: 1}, "BrightWok")
+  //addToWaitlist({guestPhoneNumber: 2222222, partySize: 1}, "Au Cheval")
   //You need to await the response from getFullWaitlist
   //getFullWaitlist("Bombay Wraps")
-  //cancelReservation(2, "BrightWok")
-  //nextParty(1, "BrightWok")
+  //cancelReservation(2, "Au Cheval")
+  //nextParty(1, "Au Cheval")
   //Returns how long your wait is!
-  //howLongIsMyWait(2222222, "BrightWok")
+  //howLongIsMyWait(2222222, "Au Cheval")
   //allRestaurants()
 
     console.log("twilio")

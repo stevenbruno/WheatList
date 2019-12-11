@@ -30,9 +30,9 @@ export async function fakeData() {
   })
   db.collection("Restaurants").add({
     Admin: "",
-    Name: "BrightWok",
+    Name: "Au Cheval",
     Waitlist: ["{}"],
-    Image: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiRi4Wn09jlAhVnHjQIHThlDi4QjRx6BAgBEAQ&url=https%3A%2F%2Fchicago.eater.com%2F2018%2F6%2F18%2F17474836%2Fbrightwok-river-north-asian-restaurant-second-location-chilis&psig=AOvVaw2QdhAi5mcZxnmiY79uqjf1&ust=1573235019307758"
+    Image: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiRi4Wn09jlAhVnHjQIHThlDi4QjRx6BAgBEAQ&url=https%3A%2F%2Fchicago.eater.com%2F2018%2F6%2F18%2F17474836%2FAu Cheval-river-north-asian-restaurant-second-location-chilis&psig=AOvVaw2QdhAi5mcZxnmiY79uqjf1&ust=1573235019307758"
   })
 }
 
